@@ -23,3 +23,13 @@ document.getElementById('start').onclick=function(){
     
     
 }
+
+
+function startCount()
+{
+    
+   action = setInterval(function(){
+       timeremain -=1;
+       document.getElementById('timeremain').innerHTML = timeremain;
+   },1000);
+}
