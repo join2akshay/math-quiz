@@ -31,5 +31,19 @@ function startCount()
    action = setInterval(function(){
        timeremain -=1;
        document.getElementById('timeremain').innerHTML = timeremain;
+       if(timeremain===0)
+           {
+               document.getElementById('time').style.display="none";
+               gameOver();
+           }
    },1000);
 }
+
+
+function gameOver()
+{
+    
+    document.getElementById('gameover').style.display="block";
+    document.getElementById('scoreno').innerHTML=score;
+}
+
