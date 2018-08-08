@@ -14,7 +14,7 @@ document.getElementById('start').onclick=function(){
         document.getElementById('scoreValue').innerHTML = score ;
         document.getElementById('time').style.display="block"; 
         timeremain=60;
-        
+        genQA();
         document.getElementById('start').innerHTML="Reset Game";
        
         startCount();
@@ -47,3 +47,13 @@ function gameOver()
     document.getElementById('scoreno').innerHTML=score;
 }
 
+function genQA() {
+
+    var x=Math.round(10*Math.random());
+    var y=Math.round(10*Math.random());
+    correctAnswer= x*y;
+    document.getElementById('qtn').textContent=x +' x '+y;
+    var correctPostion= 1+Math.round(3*Math.random());
+    document.getElementById('option'+correctPostion).innerHTML=correctAnswer;
+
+}
