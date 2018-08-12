@@ -57,3 +57,32 @@ function genQA() {
     document.getElementById('option'+correctPostion).innerHTML=correctAnswer;
 
 }
+
+
+for(i=1;i<5;i++)
+{
+    document.getElementById('option'+i).onclick=function(){
+
+        if(playing===true)
+        {
+            if(this.innerHTML==correctAnswer)
+            {
+                score++;
+                document.getElementById('scoreValue').innerHTML = score ;
+                hide('try');
+                show('correct');
+                setTimeout(function(){
+                    hide('correct');
+                },1000);
+                
+                genQA();
+            }else{
+                show('try');
+                hide('correct');
+                setTimeout(function(){
+                    hide('try');
+                },1000);
+            }
+        }
+    }
+}
