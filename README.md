@@ -9,5 +9,13 @@
 
 ### intruction
 
+first go to the quiz link : https://tvibhu12.github.io/math-quiz/
+then you see the quiz . 
+click on the start button for start the game.
 
 ### language
+
+i use three language for this quiz
+1. HTML (desgin)
+2. CSS (styling)
+3. JavaScript (funtionality)
